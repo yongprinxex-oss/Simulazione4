@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thread e Commenti - HN Tech Feed</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='12' y='12' width='76' height='76' rx='16' fill='%230d1117'/><rect x='18' y='18' width='64' height='64' rx='12' fill='none' stroke='%23ff7b2e' stroke-width='4'/><text x='50' y='67' text-anchor='middle' font-family='Arial, sans-serif' font-size='48' font-weight='700' fill='%23ff7b2e'>Y</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main-content">
+        <section class="panel page-section">
+            <h2>Thread e Commenti</h2>
+            <p class="section-description">
+                Carica uno story ID e naviga il suo albero commenti con lazy loading dei rami profondi.
+            </p>
+            <div class="form-grid">
+                <div class="form-group input-wide">
+                    <label for="thread-id-input">Story ID</label>
+                    <!-- TODO 2: Inserire la classe corretta per mostrare il campo di input.
+                         Controllare altre pagine che hanno un form per vedere come è fatto
+                    -->
+                    <div class="">
+                        <input id="thread-id-input" type="number" min="1" placeholder="Es: 44309318">
+                        <button id="btn-load-thread" type="button" class="btn btn-primary">Carica Thread</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div id="thread-root"></div>
+        </section>
+    </main>
+
+    <script type="module" src="../scripts/pages/thread.js"></script>
+</body>
+</html>

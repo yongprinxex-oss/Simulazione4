@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - HN Tech Feed</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='12' y='12' width='76' height='76' rx='16' fill='%230d1117'/><rect x='18' y='18' width='64' height='64' rx='12' fill='none' stroke='%23ff7b2e' stroke-width='4'/><text x='50' y='67' text-anchor='middle' font-family='Arial, sans-serif' font-size='48' font-weight='700' fill='%23ff7b2e'>Y</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main-content">
+        <section class="hero page-section">
+            <h2>HN Tech Feed</h2>
+            <p>
+                Aggregatore news tech basato su Hacker News API: feed top stories,
+                thread ricorsivi, profili utente e lista read-it-later persistente.
+            </p>
+            <div class="quick-links">
+                <a class="btn btn-primary" href="top-stories.html">Apri Top Stories</a>
+                <a class="btn btn-secondary" href="read-later.html">Vai a Read-it-Later</a>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <h3>Come funziona</h3>
+            <div class="guide-grid">
+                <article class="guide-card">
+                    <h4>1. Feed concorrente</h4>
+                    <p>Batch Promise.all su /item/{id}.json per caricare rapidamente le top stories.</p>
+                </article>
+                <article class="guide-card">
+                    <h4>2. Thread ricorsivo</h4>
+                    <p>Traversing ad albero dei commenti via kids con espansione lazy dei rami.</p>
+                </article>
+                <article class="guide-card">
+                    <h4>3. Profili utente</h4>
+                    <p>Dati da /user/{id}.json e timeline delle ultime attivita da submitted.</p>
+                </article>
+                <article class="guide-card">
+                    <h4>4. Read-it-Later</h4>
+                    <p>Persistenza client-side degli ID articolo e re-idratazione async al mount.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="../scripts/pages/index.js"></script>
+</body>
+</html>

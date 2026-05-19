@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Stories - HN Tech Feed</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='12' y='12' width='76' height='76' rx='16' fill='%230d1117'/><rect x='18' y='18' width='64' height='64' rx='12' fill='none' stroke='%23ff7b2e' stroke-width='4'/><text x='50' y='67' text-anchor='middle' font-family='Arial, sans-serif' font-size='48' font-weight='700' fill='%23ff7b2e'>Y</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main-content">
+        <section class="panel page-section">
+            <h2>Top Stories</h2>
+            <p class="section-description">
+                Fetch concorrente su topstories con carico progressivo in blocchi fissi.
+            </p>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="limit-select">Elementi totali</label>
+                    <select id="limit-select">
+                        <option value="20">20</option>
+                        <option value="40" selected>40</option>
+                        <option value="60">60</option>
+                    </select>
+                </div>
+                <div class="form-group form-actions">
+                    <button id="btn-refresh" type="button" class="btn btn-primary">Ricarica feed</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div id="stories-feed" class="cards-grid"></div>
+        </section>
+    </main>
+
+    <script type="module" src="../scripts/pages/top-stories.js"></script>
+</body>
+</html>
