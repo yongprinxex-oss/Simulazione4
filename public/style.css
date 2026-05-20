@@ -157,6 +157,10 @@ textarea {
 */
 .nav-link:hover,
 .nav-link.active {
+    color: white;
+    background-color:rgb(255, 123, 46, 0.12);
+    border:1px solid rgb(255, 123, 46, 0.4);
+    transform: translateY(1px);    
 }
 
 .footer {
@@ -633,7 +637,8 @@ button:focus-visible {
 .records-table th,
 .records-table td {
     border-bottom: 1px solid rgba(216, 207, 188, 0.9);
-    
+    padding: 0.9rem;
+    text-align: left;
     
     font-size: 0.92rem;
 }

@@ -79,6 +79,14 @@ async function requestJson(url, errorPrefix) {
  */
 export async function getTopStoryIds() {
     // TODO 1: Aggiungere la fetch per recuperare gli ID delle top stories
+
+   try {
+    
+    const url = `${API_BASE}/topstories.json`;
+    const data = await requestJson(url);
+   } catch (error) {
+    
+   }
     // L'endpoint da utilizzare è `/topstories.json` usando ovviamente la costante `API_BASE` come base URL.
     // Una volta recuperati i dati (si può usare la funzione `requestJson`), verificare che
     // esistano, altrimenti restituire un array vuoto. Se esistono, restituire l'array di ID così com'è.
