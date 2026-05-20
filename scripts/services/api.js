@@ -219,7 +219,8 @@ export async function getUserById(userId) {
  * const { user, items } = await getUserSubmittedItems('pg', 10);
  */
 export async function getUserSubmittedItems(userId, limit = 20) {
-    const user = await getUserById();
+    
+    const user = await getUserById(userId);
     const ids = user.submitted.slice(0, limit);
     const items = [];
 
