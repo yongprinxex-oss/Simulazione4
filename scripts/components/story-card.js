@@ -59,12 +59,16 @@ export function createStoryCard({
     // Infine inserire meta e link nei rispettivi paragrafi con classe "story-meta"
     card.innerHTML = `
         <div class="story-header">
+
+            <h3 class="story-title">${titleLink}></h3>
             
             ${actions}
         </div>
         
-        
-        
+        <p class="story-meta">ID: ${story.id} - Autore: ${authorLink}</p>
+        <p class="story-meta">${meta}</p>
+        <p class="story-meta">${link}</p>
+    
     `;
 
     if (showActions && typeof onToggleSave === "function") {
